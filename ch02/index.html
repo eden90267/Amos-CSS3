@@ -3,8 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
+  <style type="text/css">
+    .g1 {
+      width: 300px;
+      height: 200px;
+      margin:  20px;
+      /* background-color: #aaa; */
+      background-image: linear-gradient(123deg, red 0%, yellow 100%);
+      /* background-repeat: no-repeat; */
+      background-size: 50px 50px;
+    }
+    .g2 {
+      width: 600px;
+      height: 50px;
+      /* background-color: #ccc; */
+      /* background-image: linear-gradient(110deg, #ffa 20px, #fac 20px, #fac 50px, #ffa 50px); */
+      /* background-size: 70px 100%; */
+      /* background-image: repeating-linear-gradient(110deg, #ffa 20px, rgba(255,0,0,.5) 21px, rgba(255,0,0,.5) 49px, #ffa 50px, #ffa 70px); */
+      background-image: repeating-linear-gradient(110deg, #ffffaa 20px, #ffaacc7f 21px, #ffaacc 49px, #ffffaa 50px, #ffffaa 70px);
+    }
+    .box1 {
+      width: 200px;
+      height: 200px;
+      background-color: rgba(255, 0, 0, .5);
+    }
+    .box {
+      width: 300px;
+      height: 300px;
+      background-color: #ccc;
+      background-image: url(https://api.fnkr.net/testimg/50x50/00CED1/FFF),url(https://api.fnkr.net/testimg/50x50/ffCED1/FFF),url(https://api.fnkr.net/testimg/50x50/ffCff1/FFF);
+      background-repeat: no-repeat;
+      background-position: left top, right top, right bottom;
+    }
+  </style>
 </head>
 <body>
-  
+  <div class="g1"></div>
+  <div class="g2"></div>
+
+  <div class="box1"></div>
+
+  <div class="box">
+    
+  </div>
 </body>
 </html>
