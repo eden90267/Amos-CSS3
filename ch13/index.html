@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style type="text/css">
+    .amos {
+      width: 400px;
+      height: 300px;
+      background-color: #ccc;
+      margin:  30px;
+      position: relative;
+    }
+    .amos::before {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border-top: 30px solid #ccc;
+      border-left: 30px solid transparent;
+      position: absolute;
+      top: 0;
+      left: -30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="amos">
+    amos
+  </div>
+</body>
+</html>

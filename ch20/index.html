@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style type="text/css">
+    :root {
+      --margin: 15px;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .item {
+      margin-top: 20px;
+      margin-left: var(--margin);
+      margin-right: var(--margin);
+      width: calc(100% / 3 - var(--margin) * 2);
+      height: 200px;
+      background-color: #f00;
+      float: left;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+  </div>
+</body>
+</html>
