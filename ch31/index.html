@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style type="text/css">
+
+    input:readonly {
+      background-color: #aaa;
+    }
+    input:required {
+      border: 2px solid #f00;
+    }
+    input:disabled {
+      opacity: .3;
+      background: #ccc;
+    }
+    input:valid {
+      background: #faa;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <input type="text" name="" placeholder="唯獨" readonly>
+    <input type="text" name="" placeholder="必填" required>
+    <input type="text" name="" placeholder="必填" disabled="">
+    <input type="email" name="" placeholder="必填" enabled>
+  </form>
+</body>
+</html>
