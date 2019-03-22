@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .menu > li {
+      display: inline-block;
+      position: relative;
+    }
+    .menu a {
+      display: block;
+      padding: 10px 20px;
+    }
+    .submenu {
+      /* display: none; */
+      position: absolute;
+      background-color: #ccc;
+      opacity: 0;
+      left:  -3000px;
+      width: 200px;
+      transition: opacity .5s, left 0s .5s; /* 離開執行這個 */
+    }
+    li:hover .submenu {
+      display: block;
+      left: 0;
+      opacity: 1;
+      transition: opacity .5s; /* 摸到執行這個 */
+    }
+  </style>
+</head>
+<body>
+  <ul class="menu">
+    <li>
+      <a href="#">link</a>
+    </li>
+    <li><a href="#">link</a></li>
+    <li><a href="#">link</a></li>
+    <li>
+      <a href="#">link</a>
+      <ul class="submenu">
+        <li><a href="#">sub list</a></li>
+        <li><a href="#">sub list</a></li>
+        <li><a href="#">sub list</a></li>
+        <li><a href="#">sub list</a></li>
+        <li><a href="#">sub list</a></li>
+        <li><a href="#">sub list</a></li>
+      </ul>
+    </li>
+    <li><a href="#">link</a></li>
+    <li><a href="#">link</a></li>
+  </ul>
+</body>
+</html>
