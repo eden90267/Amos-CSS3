@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style type="text/css">
+    html,body {
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .flip {
+      width: 200px;
+      height: 280px;
+      /* background-color: #ccc; */
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      font-size: 100px;
+      text-align: center;
+      line-height: 280px;
+    }
+    /* .flip {
+      transform: perspective(200px) rotateY(180deg);
+    } */
+    .F,.B {
+      width: 100%;  
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      text-align: center;
+      line-height: 280px;
+      transition: .5s;
+      backface-visibility: hidden;
+    }
+    .F {
+      background-color: #faa;
+      transform: perspective(240px) rotateY(0deg);
+    }
+    .flip:hover .F {
+      transform: perspective(240px) rotateY(180deg);
+    }
+    .B {
+      background-color: #6af;
+      transform: perspective(240px) rotateY(180deg);
+    }
+    .flip:hover .B {
+      transform: perspective(240px) rotateY(360deg);
+    }
+  </style>
+</head>
+<body>
+  
+
+
+
+
+
+<div class="flip">
+  <div class="F">F</div>
+  <div class="B">B</div>
+</div>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .perspective {
+            width: 1000px;
+            height: 700px;
+            margin: auto;
+            outline: 1px solid #000;
+            position: relative;
+            perspective: 300px;
+        }
+        .group {
+            width: 200px;
+            height: 50px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            /*outline: 4px solid #f00;*/
+            transform-style: preserve-3d;
+            transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+        }
+        .g1 {
+            left: 20px;
+            transform: translateZ(-50px) rotateX(30deg) rotateY(30deg) rotateZ(0deg);
+        }
+        .g2 {
+            left: 0;
+            right: 0;
+            transform: translateZ(-50px) rotateX(0deg) rotateY(30deg) rotateZ(30deg);
+        }
+        .g3 {
+            right: 20px;
+            transform: translateZ(-50px) rotateX(30deg) rotateY(0deg) rotateZ(30deg);
+            /*加 translateZ -50px 才不會變大*/
+        }
+        .group > div {
+            position: absolute;
+            outline: 2px solid #00f;
+            font-size: 40px;
+            text-align: center;
+            backface-visibility: hidden;
+        }
+
+
+        .front,
+        .back {
+            width: 200px;
+            height: 50px;
+            left: 0;
+            top: 0;
+            line-height: 50px;
+        }
+        .front {
+            transform: translateZ(50px);
+        }
+        .back {
+            transform: rotateY(180deg) translateZ(50px);
+        }
+
+
+        .top,
+        .down {
+            width: 200px;
+            height: 100px;
+            left: 0;
+            top: -25px;
+            line-height: 100px;
+        }
+        .top {
+            transform: rotateX(90deg) translateZ(25px);
+        }
+        .down {
+            transform: rotateX(270deg) translateZ(25px);
+        }
+
+
+        .right,
+        .left {
+            width: 100px;
+            height: 50px;
+            top: 0;
+            left: 50px;
+            line-height: 50px;
+        }
+        .right {
+            transform: rotateY(90deg) translateZ(100px);
+        }
+        .left {
+            transform: rotateY(270deg) translateZ(100px);
+        }
+    </style>
+</head>
+<body>
+
+
+
+
+
+<div class="perspective">
+    <div class="group g1">
+        <div class="front">F</div>
+        <div class="back">B</div>
+        <div class="top">T</div>
+        <div class="down">D</div>
+        <div class="right">R</div>
+        <div class="left">L</div>
+    </div>
+    <div class="group g2">
+        <div class="front">F</div>
+        <div class="back">B</div>
+        <div class="top">T</div>
+        <div class="down">D</div>
+        <div class="right">R</div>
+        <div class="left">L</div>
+    </div>
+    <div class="group g3">
+        <div class="front">F</div>
+        <div class="back">B</div>
+        <div class="top">T</div>
+        <div class="down">D</div>
+        <div class="right">R</div>
+        <div class="left">L</div>
+    </div>
+</div>
+
+
+
+
+
+</body>
+</html>
