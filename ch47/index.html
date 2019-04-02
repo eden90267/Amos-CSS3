@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        li {
+            position: relative;
+            display: inline-block;
+            margin: 3px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 1px solid #f00;
+            animation: RRR 2s infinite alternate paused;
+        }
+        li:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 1px solid #f00;
+            transform: scale(1.02);
+            animation: RRR 2.5s -1s infinite alternate-reverse paused;
+        }
+        li:nth-child(3n) {
+            animation: RRR 2.3s -1.3s infinite alternate-reverse paused;
+        }
+        li:nth-child(4n) {
+            animation: RRR 2.2s -1.4s infinite alternate paused;
+        }
+        li:nth-child(4n+1) {
+            animation: RRR 2.5s -1s infinite alternate-reverse paused;
+        }
+        li:nth-child(3n):before {
+            animation: RRR 2.1s -1s infinite alternate paused;
+        }
+        li:nth-child(4n):before {
+            animation: RRR 2.5s -1.9s infinite alternate-reverse paused;
+        }
+        li:nth-child(4n+1):before {
+            animation: RRR 2.3s -1.4s infinite alternate paused;
+        }
+        li:hover {
+            animation-play-state: running;
+        }
+        li:hover:before {
+            animation-play-state: running;
+        }
+        @keyframes RRR {
+            0% {
+                border-radius: 40% 60% 40% 60% / 60% 35% 65% 40%;
+            }
+            33% {
+                border-radius: 55% 45% 60% 40% / 50% 60% 40% 50%;
+            }
+            66% {
+                border-radius: 45% 55% 70% 30% / 55% 55% 45% 45%;
+            }
+            100% {
+                border-radius: 65% 35% 30% 70% / 42% 32% 68% 58%;
+            }
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+</body>
+</html>

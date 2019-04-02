@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .aaa {
+            /*animation: 動畫名稱 播放時間 延遲執行時間 加減速 次數 方向 填充模式 播放狀態;*/
+            /*animation-name: ;*/
+            /*animation-duration: ;*/
+            /*animation-delay: ;*/
+            /*animation-timing-function: ;*/
+            /*animation-iteration-count: ;*/
+            /*animation-direction: ;*/
+            /*animation-fill-mode: ;*/
+            /*animation-play-state: ;*/
+        }
+
+        @keyframes move {
+            0% {
+                left: 0;
+            }
+            100% {
+                left: 200px;
+            }
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            position: relative;
+        }
+        .box1 {
+            background-color: #f00;
+            animation: move 1s infinite alternate paused;
+        }
+        .box2 {
+            background-color: #0f0;
+            animation: move 1s infinite alternate-reverse paused;
+        }
+        .box3 {
+            background-color: #00f;
+            animation: move 1s infinite alternate paused;
+        }
+        .box:hover {
+            animation-play-state: running;
+        }
+    </style>
+</head>
+<body>
+<div class="box box1"></div>
+<div class="box box2"></div>
+<div class="box box3"></div>
+</body>
+</html>
