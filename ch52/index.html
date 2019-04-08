@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #f00;
+            position: absolute;
+            top: 100px;
+            animation:
+                    ani1 3s infinite alternate,
+                    ani2 .3s infinite alternate;
+        }
+        @keyframes ani1 {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes ani2 {
+            0% {
+                left: 0;
+            }
+            100% {
+                left: 200px;
+            }
+            /*改用 left 而不用 translateX 才不會衝突*/
+        }
+    </style>
+</head>
+<body>
+
+
+
+<div class="box"></div>
+
+
+
+</body>
+</html>
