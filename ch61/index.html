@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .slider {
+            width: 500px;
+            /*outline: 10px solid #f00;*/
+            margin: 50px auto;
+            text-align: center;
+        }
+        .view {
+            width: 500px;
+            /*outline: 5px solid #00f;*/
+            overflow: hidden;
+        }
+        .view ul {
+            width: 1500px;
+            font-size: 0;
+            margin-bottom: 10px;
+            position: relative;
+            left: 0;
+            transition: 1s;
+        }
+        .view ul li {
+            width: 500px;
+            display: inline-block;
+        }
+        /*.view img {*/
+        /*    vertical-align: middle;*/
+        /*}*/
+        .slider button {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #666;
+            border: none;
+            margin: 0 3px;
+        }
+    </style>
+</head>
+<body>
+
+
+
+
+<div class="slider">
+    <div class="view">
+        <ul>
+            <li>
+                <img src="https://api.fnkr.net/testimg/500x300/00ffd1/FFF/?text=A">
+            </li>
+            <li>
+                <img src="https://api.fnkr.net/testimg/500x300/00ffd1/FFF/?text=B">
+            </li>
+            <li>
+                <img src="https://api.fnkr.net/testimg/500x300/00ffd1/FFF/?text=C">
+            </li>
+        </ul>
+    </div>
+    <div class="dot">
+        <button class="dot1"></button>
+        <button class="dot2"></button>
+        <button class="dot3"></button>
+    </div>
+</div>
+
+
+
+
+<script
+        src="https://code.jquery.com/jquery-3.4.0.min.js"
+        integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+        crossorigin="anonymous">
+</script>
+<script>
+  $('.dot1').click(function () {
+    $('.view ul').css({ left: 0 });
+  })
+    $('.dot2').click(function () {
+      $('.view ul').css({ left: -500 });
+    })
+  $('.dot3').click(function () {
+    $('.view ul').css({ left: -1000 });
+  })
+</script>
+</body>
+</html>

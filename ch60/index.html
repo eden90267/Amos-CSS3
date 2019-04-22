@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .tab-panels {
+            width: 600px;
+            margin: 50px auto;
+        }
+        .tab-group .tab {
+            border: none;
+            padding: 10px 20px;
+            background-color: #fa0;
+            transition: background-color .5s;
+        }
+        .tab-group .tab.active {
+            background-color: #00f;
+            color: #fff;
+            position: relative;
+        }
+        .tab-group .tab.active:after {
+            content: '';
+            display: block;
+            width: calc(100% - 4px);
+            height: 2px;
+            bottom: -2px;
+            left: 2px;
+            position: absolute;
+            background-color: #fff;
+        }
+        .tab-content-group {
+            border: 2px solid #00f;
+
+        }
+        .tab-content:first-letter {
+            font-size: 60px;
+        }
+        .tab-content {
+            opacity: 0;
+            /*position: absolute;*/
+            height: 0;
+            overflow: hidden;
+            transition: opacity .5s;
+        }
+        .tab-content.active {
+            opacity: 1;
+            /*position: relative;*/
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="tab-panels">
+    <div class="tab-group">
+        <button class="tab tab1 active">Tab1</button>
+        <button class="tab tab2">Tab2</button>
+        <button class="tab tab3">Tab3</button>
+    </div>
+    <div class="tab-content-group">
+        <div class="tab-content tab-content1 active">A Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aspernatur consectetur doloremque, ducimus eaque ipsum itaque iure magnam maiores minima molestiae nemo nulla quo reiciendis repellendus tempore voluptas! Itaque, quo?</div>
+        <div class="tab-content tab-content2">B Lorem ipsum dolor sit amet, consectetur adipisicing elit. amet, consectetur adipisicing elit, Hic iste laboriosam libero maxime molestias necessitatibus omnis quasi sunt tempore, veniam. At, doloremque labore libero minus praesentium provident qui reprehenderit. Vel.</div>
+        <div class="tab-content tab-content3">C Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium dolor dolorem exercitationem ipsam magnam minima natus necessitatibus neque nobis pariatur. Dicta itaque neque obcaecati porro quasi! Corporis minima nostrum tempora?</div>
+    </div>
+</div>
+
+
+<script
+        src="https://code.jquery.com/jquery-3.4.0.min.js"
+        integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+        crossorigin="anonymous">
+</script>
+<script>
+$('.tab').click(function () {
+  $('.tab-panels .active').removeClass('active')
+
+  $(this).addClass('active')
+})
+$('.tab1').click(function () {
+  $('.tab-content1').addClass('active')
+})
+$('.tab2').click(function () {
+  $('.tab-content2').addClass('active')
+})
+$('.tab3').click(function () {
+  $('.tab-content3').addClass('active')
+})
+</script>
+</body>
+</html>
